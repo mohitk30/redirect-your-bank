@@ -54,17 +54,17 @@ void welc(void){
             }
             void time_cal(){        // log in time function
             FILE *ptr;
-            ptr=fopen("last_log_time.bin","rb");
+            ptr=fopen("last_log_time.txt","r");
             if(ptr==0){
             printf("ERRRRR\n");
             }
             char buf[50];
-            fread(buf,sizeof(buf[0]),sizeof(buf)/sizeof(buf[0]),ptr);
+            fscanf(ptr,"%s",buf);
             printf("\n                         		 Last login:%s\n",buf);
             fclose(ptr);
             
             FILE *ptr_n;
-            ptr_n=fopen("last_log_time.bin","wb");
+            ptr_n=fopen("last_log_time.txt","w");
             if(ptr_n==0){
             printf("ERRRRRR\n");
             }
@@ -73,7 +73,7 @@ void welc(void){
             time(&log);
             char co[30];
             strcpy(co,ctime(&log));
-            fwrite(co,sizeof(co[0]),sizeof(co)/sizeof(co[0]),ptr_n);
+            fprintf(ptr_n,"%s",co);
             fclose(ptr_n);
             
             }
