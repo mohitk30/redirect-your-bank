@@ -59,7 +59,7 @@ void welc(void){
             printf("ERRRRR\n");
             }
             char buf[50];
-            fscanf(ptr,"%s",buf);
+            fscanf(ptr,"%[^\n]s",buf);
             printf("\n                         		 Last login:%s\n",buf);
             fclose(ptr);
             
