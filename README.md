@@ -1,4 +1,4 @@
-# Reidrect to your need 
+# Redirect to your need 
 this programe is nicely running in ubunto 20.04
 
 you can install this than run it
