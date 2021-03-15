@@ -1,4 +1,4 @@
-# Redirect to your need 
+# Redirect to your needed bank
 this programe is nicely running in ubunto 20.04
 
 you can install this than run it
